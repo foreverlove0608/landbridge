@@ -3,13 +3,6 @@
 /* ====================================================
 Layout
 ==================================================== */
-.wrapper{
-	padding-top: 115px;
-	@include mq(tb){
-		padding-top: 70px;
-	}
-}
-
 .inner{
 	width: 90%;
 	margin: 0 auto;
@@ -22,4 +15,12 @@ Layout
 
 .l-wrap{
 	@include flex(0, 0, wrap);
+}
+
+.l-grid{
+	display: grid;
+}
+
+.l-grid-2c{
+	grid-template-columns: 1fr 1fr;
 }

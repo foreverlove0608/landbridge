@@ -1,0 +1,133 @@
+@use 'vars' as *;
+
+.mv-top{
+    position: relative;
+    padding: 60px 0 92px;
+    z-index: 2;
+    background: url(../img/index/bg-mv.png) no-repeat center/cover;
+    .inner{
+        max-width: 1160px;
+        width: 91%;
+    }
+    &__logo{
+        display: block;
+        width: 170px;
+        margin-bottom: 53px;
+    }
+    &__ttl{
+        max-width: 725px;
+        width: 100%;
+        margin-bottom: 42px;
+        position: relative;
+        z-index: 2;
+    }
+    &__desc{
+        @include font-size(20);
+        margin-bottom: 48px;
+        line-height: 1.95;
+    }
+    &__img{
+        width: 623px;
+        position: absolute;
+        bottom: -95px;
+        right: 0;
+    }
+}
+
+.problems-top{
+    padding: 217px 0 212px;
+    background: #0D3C75;
+    &__wp{
+        &-img{
+            width: 433px;
+            position: relative;
+            top: -9px;
+        }
+        &-ct{
+            width: calc(100% - 433px);
+            padding-left: 62px;
+        }
+        &-list{
+            @include fts(24, 30);
+            color: #fff;
+            font-weight: 700;
+            li{
+                position: relative;
+                margin-bottom: 30px;
+                padding-left: 52px;
+                @include p-before(28px, 28px){
+                    background: url(../img/index/ico-check.png) no-repeat center/100%;
+                    top: 0;
+                    left: 0;
+                }
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.aboutus-top{
+    padding: 270px 0 200px;
+    &__ttl{
+        margin-bottom: 54px;
+    }
+    &__content{
+        background: #F6F6F6;
+        padding: 98px 114px 70px;
+        margin-bottom: 224px;
+        position: relative;
+    }
+    &__list{
+        li{
+            position: relative;
+            display: block;
+            padding-bottom: 15px;
+            margin-bottom: 31px;
+            border-bottom: 1px dashed #C6C6C6;
+            @include font-size(22);
+            line-height: 1.3;
+            font-weight: 700;
+            padding-left: 35px;
+            @include p-before(26px, 28px){
+                background: url(../img/index/ico-light.png) no-repeat center/100%;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    &__img-left{
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(40%);
+    }
+    &__img-right{
+        position: absolute;
+        width: 286px;
+        bottom: 0;
+        right: 0;
+        transform: translateY(40%);
+    }
+    &__ttlsub{
+        @include fts(28, 54);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__desc{
+        text-align: center;
+        margin-bottom: 80px;
+        p{
+            margin-bottom: 44px;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__btn{
+        margin: 0 auto;
+    }
+}

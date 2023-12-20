@@ -81,7 +81,7 @@ Component
 // Common Text style
 .c-txt{
 	&__01{//14/29
-		@include fts(14,29);
+		@include fts(20, 44);
 		@include mq(sm) {
 			line-height: 1.8;
 		}
@@ -105,13 +105,28 @@ Component
 
 .c-ttl{
 	&__01{
-		@extend %__c-ttl__01;
-		&--ff{
-			@extend %__c-ttl__01;
-			color: #fff;
-			&:before{
-				background: #fff;
+		text-align: center;
+		font-weight: 700;
+		margin-bottom: 80px;
+		& > *{
+			display: block;
+		}
+		.txt-lg{
+			@include font-size(50);
+			line-height: 1.6;
+			span{
+				color: #FF7E36;
 			}
+		}
+		.txt-sm{
+			@include font-size(35);
+			margin-bottom: 28px;
+		}
+		&--white{
+			color: #fff;
+		}
+		&--yellow{
+			color: #FFF961;
 		}
 	}
 	&__02{
@@ -185,11 +200,52 @@ Component
 
 
 .c-btn__01{
-	@extend %__c-btn__01;
-	&--ff{
-		@extend %__c-btn__01;
+	max-width: 340px;
+	width: 100%;
+	text-align: center;
+	.txt-note{
+		display: inline-block;
+		@include font-size(14);
+		font-weight: 700;
+		margin-bottom: 10px;
+		position: relative;
+		&::before, &:after{
+			content: "";
+			display: block;
+			width: 1px;
+			height: 15px;
+			background: #000;
+			position: absolute;
+			bottom: 0;
+		}
+		&::before{
+			left: -15px;
+			transform: rotate(-25deg);
+		}
+		&::after{
+			right: -10px;
+			transform: rotate(25deg);
+		}
+	}
+	a{
+		background: rgb(255,122,0);
+		background: linear-gradient(90deg, rgba(255,122,0,1) 0%, rgba(231,181,0,1) 100%);
+		height: 80px;
+		@include flex(center, center);
+		border-radius: 40px;
+		@include font-size(24);
+		font-weight: 700;
 		color: #fff;
-		border-bottom: 2px solid #fff;
+		span{
+			display: inline-flex;
+			align-items: center;
+			position: relative;
+			@include p-before(18px, 14px){
+				background: url(../img/index/ico-email.png) no-repeat center/100%;
+				position: relative;
+				margin-right: 5px;
+			}
+		}
 	}
 }
 
