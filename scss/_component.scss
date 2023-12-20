@@ -11,14 +11,6 @@ Control
 
 
 
-.c-ft{//font-family
-	&--en{
-		font-family: $font-en;
-	}
-}
-
-
-
 .c-fw{//font-weight
 	&--lt{
 		font-weight: 300!important
@@ -103,13 +95,10 @@ Component
 	display: inline-block;
 	position: relative;
 	padding-right: 64px;
-	color: $color-rd;
 	@include font-size(15);
-	@include font-fm($font-en,400);
 	@include p-before(54px, 2px){
 		@include v-align;
 		right: 0;
-		background: $color-rd;
 	}
 }
 
@@ -195,34 +184,15 @@ Component
 
 
 
-%__c-btn__01--hover{
-	&:hover{
-		@media (any-hover: hover) {
-			color: $color-rd;
-			border-bottom: 2px solid $color-rd;
-			&:before{
-				right: -5px;
-				color: $color-rd;
-			}
-		}
-	}
-}
-
-
-
 .c-btn__01{
 	@extend %__c-btn__01;
-	@extend %__c-btn__01--hover;
 	&--ff{
 		@extend %__c-btn__01;
 		color: #fff;
 		border-bottom: 2px solid #fff;
-		@extend %__c-btn__01--hover;
 	}
 }
 
-
-  
 
 
 
