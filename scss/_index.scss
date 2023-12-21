@@ -5,14 +5,25 @@
 	padding: 60px 0 92px;
 	z-index: 2;
 	background: url(../img/index/bg-mv.png) no-repeat center/cover;
+	@include mq{
+		padding: 15px 0 52px;
+		background: url(../img/index/bg-mv-sp.png) no-repeat top center/100%;
+	}
 	.inner{
 		max-width: 1160px;
 		width: 91%;
+		@include mq{
+			width: 100%;
+		}
 	}
 	&__logo{
 		display: block;
 		width: 170px;
 		margin-bottom: 53px;
+		@include mq{
+			width: 70px;
+			margin-bottom: 33px;
+		}
 	}
 	&__ttl{
 		max-width: 725px;
@@ -20,45 +31,91 @@
 		margin-bottom: 42px;
 		position: relative;
 		z-index: 2;
+		@include mq{
+			max-width: 323px;
+			margin-bottom: 30px;
+		}
 	}
 	&__desc{
 		@include font-size(20);
 		margin-bottom: 48px;
 		line-height: 1.95;
+		@include mq{
+			@include font-size(16);
+			line-height: 1.8;
+			margin-bottom: 20px;
+		}
 	}
 	&__img{
-		width: 623px;
+		max-width: 623px;
+		width: 100%;
 		position: absolute;
 		bottom: -95px;
 		right: 0;
+		@include mq{
+			position: relative;
+			width: calc(100% + 20px);
+			bottom: 0;
+			margin-bottom: 55px;
+			margin-left: -11px;
+		}
 	}
 }
 
 .problems-top{
 	padding: 217px 0 212px;
 	background: #0D3C75;
+	@include mq{
+		padding: 85px 0 90px;
+	}
 	&__wp{
+		@include mq{
+			flex-direction: column-reverse;
+		}
 		&-img{
 			width: 433px;
 			position: relative;
 			top: -9px;
+			@include mq{
+				max-width: 200px;
+				width: 100%;
+				top: 0;
+				margin: 0 auto;
+			}
 		}
 		&-ct{
 			width: calc(100% - 433px);
 			padding-left: 62px;
+			@include mq{
+				width: 100%;
+				padding-left: 0;
+				margin-bottom: 50px;
+			}
 		}
 		&-list{
 			@include fts(24, 30);
 			color: #fff;
 			font-weight: 700;
+			@include mq{
+				@include fts(16, 30);
+			}
 			li{
 				position: relative;
 				margin-bottom: 30px;
 				padding-left: 52px;
+				@include mq{
+					padding-left: 35px;
+					margin-bottom: 20px;
+				}
 				@include p-before(28px, 28px){
 					background: url(../img/index/ico-check.png) no-repeat center/100%;
 					top: 0;
 					left: 0;
+					@include mq{
+						width: 20px;
+						height: 20px;
+						top: 8px;
+					}
 				}
 				&:last-of-type{
 					margin-bottom: 0;
@@ -70,14 +127,26 @@
 
 .aboutus-top{
 	padding: 270px 0 200px;
+	@include mq{
+		padding: 138px 0 100px;
+	}
 	&__ttl{
 		margin-bottom: 54px;
+		@include mq{
+			margin-bottom: 60px;
+		}
 	}
 	&__content{
 		background: #F6F6F6;
 		padding: 98px 114px 70px;
 		margin-bottom: 224px;
 		position: relative;
+		@include mq{
+			padding: 76px 10px 75px;
+			margin-bottom: 150px;
+			width: calc(100% + 20px);
+			margin-left: -10px;
+		}
 	}
 	&__list{
 		li{
@@ -90,10 +159,21 @@
 			line-height: 1.3;
 			font-weight: 700;
 			padding-left: 35px;
+			@include mq{
+				@include fts(16, 32);
+				margin-bottom: 30px;
+				padding-bottom: 20px;
+				padding-right: 10px;
+			}
 			@include p-before(26px, 28px){
 				background: url(../img/index/ico-light.png) no-repeat center/100%;
 				left: 0;
 				top: 0;
+				@include mq{
+					width: 20px;
+					height: 22px;
+					top: 6px;
+				}
 			}
 		}
 	}
@@ -103,6 +183,9 @@
 		bottom: 0;
 		left: 0;
 		transform: translateY(40%);
+		@include mq{
+			display: none;
+		}
 	}
 	&__img-right{
 		position: absolute;
@@ -110,19 +193,36 @@
 		bottom: 0;
 		right: 0;
 		transform: translateY(40%);
+		@include mq{
+			width: 200px;
+			transform: none;
+		}
 	}
 	&__ttlsub{
 		@include fts(28, 54);
 		font-weight: 700;
 		text-align: center;
 		margin-bottom: 50px;
+		@include mq{
+			@include font-size(24);
+			line-height: 1.6;
+			margin-bottom: 67px;
+		}
 	}
 	&__desc{
 		@include fts(20, 44);
 		text-align: center;
 		margin-bottom: 80px;
+		@include mq{
+			@include fts(16, 32);
+			margin-bottom: 92px;
+			text-align: left;
+		}
 		p{
 			margin-bottom: 44px;
+			@include mq{
+				margin-bottom: 30px;
+			}
 			&:last-of-type{
 				margin-bottom: 0;
 			}
@@ -136,17 +236,39 @@
 .reason-top{
 	padding: 185px 0 200px;
 	background: #F6F6F6;
+	@include mq{
+		padding: 90px 0 100px;
+	}
+	&__ttl{
+		@include mq{
+			margin-bottom: 60px;
+		}
+	}
 	&__list{
 		gap: 50px;
 		padding: 0 54px;
+		@include mq{
+			padding: 0;
+			gap: 40px;
+		}
 		&-item{
 			background: #fff;
 			border-radius: 30px;
 			box-shadow: 4px 4px 34px 0 rgba($color: #000000, $alpha: .1);
 			padding: 50px 70px 60px;
+			@include mq{
+				padding: 70px 20px;
+				p{
+					line-height: 2;
+				}
+			}
 		}
 		&-img{
 			margin-bottom: 40px;
+			@include mq{
+				max-width: 200px;
+				margin: 0 auto 40px;
+			}
 		}
 		&-ttl{
 			@include fts(24, 40);
@@ -160,32 +282,65 @@
 
 .features-top{
 	padding: 184px 0 0;
+	@include mq{
+		padding: 140px 0 0;
+	}
 	&__ttl{
-		margin-bottom: 57px
+		// margin-bottom: 57px;
+		@include mq{
+			margin-bottom: 62px;
+		}
 	}
 	&__desc{
 		@include font-size(24);
 		line-height: 2.3;
 		text-align: center;
 		margin-bottom: 242px;
+		@include mq{
+			@include font-size(16);
+			margin-bottom: 50px;
+			text-align: left;
+			line-height: 2;
+		}
 	}
 	&__main{
 		background: #0D3C75;
 		padding-bottom: 140px;
+		@include mq{
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
 	}
 	&__list{
 		margin: 0 -70px 110px;
 		padding: 0 13%;
+		@include mq{
+			padding: 0;
+			margin: 0 0 90px;
+		}
 		&-item{
 			width: 50%;
-			padding: 0 70px;
+			padding: 0 60px;
+			@include mq{
+				width: 100%;
+				margin-bottom: 150px;
+				padding: 0 15px;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
 		}
 		&-img{
 			max-width: 330px;
 			width: 100%;
 			margin: 0 auto -28%;
 			position: relative;
-			transform: translateY(-50%)
+			transform: translateY(-50%);
+			@include mq{
+				max-width: 200px;
+				margin: 0 auto 47px;
+				transform: none;
+			}
 		}
 		&-ttl{
 			@include font-size(44);
@@ -194,10 +349,17 @@
 			color: #FF7E36;
 			text-align: center;
 			margin-bottom: 60px;
+			@include mq{
+				@include font-size(24);
+				margin-bottom: 30px;
+			}
 		}
 		&-desc{
 			color: #ffff;
 			font-weight: 700;
+			@include mq{
+				line-height: 2;
+			}
 			p{
 				margin-bottom: 30px;
 				&:last-of-type{
@@ -210,6 +372,9 @@
 
 .support-top{
 	padding: 185px 0 200px;
+	@include mq{
+		padding: 140px 0 100px;
+	}
 	&__ttl{
 		margin-bottom: 75px;
 	}
