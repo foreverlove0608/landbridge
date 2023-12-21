@@ -29,9 +29,13 @@ $(function () {
 
 // matchHeight
 jQuery(function ($) {
-	$('.mh').matchHeight();
+	$('.reason-top__list-ttl').matchHeight();
+	$('.results-top__list-icon').matchHeight();
+	$('.system-top__list-img').matchHeight();
+	$('.system-top__list-desc').matchHeight();
+	$('.request-top__list-item p').matchHeight();
 	$(window).on("load resize", function () {
-		$('.mh-child').matchHeight();
+		$('.reason-top__list-ttl').matchHeight();
 	});
 });
 
