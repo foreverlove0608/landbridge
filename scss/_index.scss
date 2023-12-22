@@ -26,8 +26,7 @@
 		}
 	}
 	&__ttl{
-		max-width: 725px;
-		width: 100%;
+		max-width: 62.5%;
 		margin-bottom: 42px;
 		position: relative;
 		z-index: 2;
@@ -40,6 +39,8 @@
 		@include font-size(20);
 		margin-bottom: 48px;
 		line-height: 1.95;
+		position: relative;
+		z-index: 2;
 		@include mq{
 			@include font-size(16);
 			line-height: 1.8;
@@ -47,15 +48,21 @@
 		}
 	}
 	&__img{
-		max-width: 623px;
-		width: 100%;
+		width: 48.7%;
 		position: absolute;
 		bottom: -95px;
 		right: 0;
 		@include mq{
+			right: -20px;
+			top: 4vw;
+			bottom: auto;
+		}
+		@include mq(sm){
 			position: relative;
 			width: calc(100% + 20px);
 			bottom: 0;
+			top: auto;
+			right: 0;
 			margin-bottom: 55px;
 			margin-left: -11px;
 		}
@@ -63,19 +70,23 @@
 }
 
 .problems-top{
-	padding: 217px 0 212px;
+	padding: min(16.953vw, 217px) 0 min(16.563vw, 212px);
 	background: #0D3C75;
 	@include mq{
 		padding: 85px 0 90px;
 	}
 	&__wp{
-		@include mq{
+		@include mq(tb){
 			flex-direction: column-reverse;
 		}
 		&-img{
 			width: 433px;
 			position: relative;
 			top: -9px;
+			@include mq(tb){
+				margin: 0 auto;
+				width: 300px;
+			}
 			@include mq{
 				max-width: 200px;
 				width: 100%;
@@ -86,10 +97,15 @@
 		&-ct{
 			width: calc(100% - 433px);
 			padding-left: 62px;
-			@include mq{
+			@include mq(tb){
+				max-width: 700px;
+				width: 100%;
+				margin: 0 auto 50px;
+			}
+			@include mq(){
+				max-width: 450px;
 				width: 100%;
 				padding-left: 0;
-				margin-bottom: 50px;
 			}
 		}
 		&-list{
@@ -126,7 +142,7 @@
 }
 
 .aboutus-top{
-	padding: 270px 0 200px;
+	padding: min(21.094vw, 270px) 0 min(15.625vw, 200px);
 	@include mq{
 		padding: 138px 0 100px;
 	}
@@ -138,8 +154,8 @@
 	}
 	&__content{
 		background: #F6F6F6;
-		padding: 98px 114px 70px;
-		margin-bottom: 224px;
+		padding: min(7.656vw, 98px) min(8.906vw, 114px) min(5.469vw, 70px);
+		margin-bottom: min(17.500vw, 224px);
 		position: relative;
 		@include mq{
 			padding: 76px 10px 75px;
@@ -159,11 +175,16 @@
 			line-height: 1.3;
 			font-weight: 700;
 			padding-left: 35px;
+			@include mq(tb){
+				@include font-size(20);
+				line-height: 1.5;
+			}
 			@include mq{
 				@include fts(16, 32);
 				margin-bottom: 30px;
 				padding-bottom: 20px;
 				padding-right: 10px;
+				line-height: 1.3;
 			}
 			@include p-before(26px, 28px){
 				background: url(../img/index/ico-light.png) no-repeat center/100%;
@@ -184,6 +205,11 @@
 		left: 0;
 		transform: translateY(40%);
 		@include mq{
+			width: 220px;
+			transform: none;
+			bottom: -9px;
+		}
+		@include mq(sm){
 			display: none;
 		}
 	}
@@ -203,8 +229,10 @@
 		font-weight: 700;
 		text-align: center;
 		margin-bottom: 50px;
-		@include mq{
+		@include mq(tb){
 			@include font-size(24);
+		}
+		@include mq{
 			line-height: 1.6;
 			margin-bottom: 67px;
 		}
@@ -212,7 +240,10 @@
 	&__desc{
 		@include fts(20, 44);
 		text-align: center;
-		margin-bottom: 80px;
+		margin-bottom: min(6.250vw, 80px);
+		@include mq(tb){
+			@include font-size(18);
+		}
 		@include mq{
 			@include fts(16, 32);
 			margin-bottom: 92px;
@@ -220,7 +251,7 @@
 		}
 		p{
 			margin-bottom: 44px;
-			@include mq{
+			@include mq(tb){
 				margin-bottom: 30px;
 			}
 			&:last-of-type{
@@ -234,7 +265,7 @@
 }
 
 .reason-top{
-	padding: 185px 0 200px;
+	padding: min(14.453vw, 185px) 0 min(15.625vw, 200px);
 	background: #F6F6F6;
 	@include mq{
 		padding: 90px 0 100px;
@@ -247,15 +278,25 @@
 	&__list{
 		gap: 50px;
 		padding: 0 54px;
-		@include mq{
+		@include mq(xl){
 			padding: 0;
+		}
+		@include mq{
+			gap: 15px;
+			grid-template-columns: 1fr 1fr;
+		}
+		@include mq(sm){
+			grid-template-columns: 1fr;
 			gap: 40px;
 		}
 		&-item{
 			background: #fff;
 			border-radius: 30px;
 			box-shadow: 4px 4px 34px 0 rgba($color: #000000, $alpha: .1);
-			padding: 50px 70px 60px;
+			padding: min(3.906vw, 50px)  min(5.469vw, 70px) min(4.688vw, 60px);
+			@include mq(tb){
+				padding: 50px 20px;
+			}
 			@include mq{
 				padding: 70px 20px;
 				p{
@@ -281,12 +322,11 @@
 }
 
 .features-top{
-	padding: 184px 0 0;
+	padding: min(14.375vw, 184px) 0 0;
 	@include mq{
 		padding: 140px 0 0;
 	}
 	&__ttl{
-		// margin-bottom: 57px;
 		@include mq{
 			margin-bottom: 62px;
 		}
@@ -296,6 +336,9 @@
 		line-height: 2.3;
 		text-align: center;
 		margin-bottom: 242px;
+		@include mq(tb){
+			@include font-size(20);
+		}
 		@include mq{
 			@include font-size(16);
 			margin-bottom: 50px;
@@ -314,14 +357,27 @@
 	&__list{
 		margin: 0 -70px 110px;
 		padding: 0 13%;
+		@include mq(tb){
+			padding: 0;
+			margin: 0 -30px 110px;
+		}
 		@include mq{
+			margin: 0 -15px 90px;
+		}
+		@include mq(sm){
 			padding: 0;
 			margin: 0 0 90px;
 		}
 		&-item{
 			width: 50%;
 			padding: 0 60px;
+			@include mq(tb){
+				padding: 0 30px;
+			}
 			@include mq{
+				padding: 0 15px;
+			}
+			@include mq(sm){
 				width: 100%;
 				margin-bottom: 150px;
 				padding: 0 15px;
@@ -371,17 +427,25 @@
 }
 
 .support-top{
-	padding: 185px 0 200px;
+	padding: min(14.453vw, 185px) 0 min(15.625vw, 200px);
 	@include mq{
-		padding: 140px 0 100px;
+		padding: 140px 0 150px;
 	}
 	&__ttl{
 		margin-bottom: 75px;
+		@include mq{
+			margin-bottom: 62px;
+		}
 	}
 	&__list{
-		gap: 100px;
+		gap: min(7.813vw, 100px);
+		@include mq{
+			gap: 70px;
+		}
 		&-item{
-
+			@include mq{
+				line-height: 2;
+			}
 		}
 		&-ttl{
 			@include font-size(28);
@@ -395,24 +459,46 @@
 			border-radius: 55px;
 			text-align: center;
 			margin-bottom: 40px;
+			@include mq(tb){
+				@include font-size(24);
+				padding: 33px 20px;
+			}
 		}
 	}
 }
 
 .results-top{
-	padding: 185px 0 200px;
+	padding: min(14.453vw, 185px) 0 min(15.625vw, 200px);
 	background: #F2F2F2;
+	@include mq{
+		padding: 90px 0 100px;
+	}
 	&__ttl{
 		margin-bottom: 74px;
+		@include mq{
+			margin-bottom: 60px;
+		}
 	}
 	&__list{
-		gap: 88px 60px;
-		margin-bottom: 100px;
+		gap: min(6.875vw, 88px) min(4.688vw, 60px);
+		margin-bottom: min(7.813vw, 100px);
+		@include mq{
+			gap: 15px 20px;
+			margin-bottom: 88px;
+			grid-template-columns: 1fr 1fr;
+		}
+		@include mq(sm){
+			gap: 35px 60px;
+			grid-template-columns: 1fr;
+		}
 		&-item{
 			border: 4px solid #0D3C75;
 			padding: 50px 40px 40px;
 			background: #fff;
 			border-radius: 20px;
+			@include mq{
+				padding: 58px 20px;
+			}
 		}
 		&-icon{
 			text-align: center;
@@ -425,6 +511,12 @@
 			color: #0D3C75;
 			margin-bottom: 24px;
 			font-weight: 700;
+			@include mq(tb){
+				line-height: 1.55;
+			}
+			@include mq{
+				margin-bottom: 14px;
+			}
 		}
 		&-desc{
 			text-align: center;
@@ -433,93 +525,170 @@
 }
 
 .system-top{
-	padding: 185px 0 170px;
+	padding: min(14.453vw, 185px) 0 min(13.281vw, 170px);
 	background: #0d3b74;
 	background: -webkit-gradient(linear, left top, right top, from(#0d3b74), to(#0456a2));
 	background: -o-linear-gradient(left, #0d3b74 0%, #0456a2 100%);
 	background: linear-gradient(90deg, #0d3b74 0%, #0456a2 100%);
+	@include mq{
+		padding: 90px 0 60px;
+	}
 	&__ttl{
 		margin-bottom: 74px;
+		@include mq{
+			margin-bottom: 60px;
+		}
 	}
 	&__list{
 		margin: 0 -20px -80px;
 		justify-content: center;
 		padding: 0 60px;
+		@include mq(tb){
+			padding: 0;
+			margin: 0 auto;
+		}
 		&-item{
 			width: 50%;
 			padding: 0 20px;
 			margin-bottom: 80px;
+			@include mq{
+				margin-bottom: 40px;
+				padding: 0 10px;
+			}
+			@include mq(sm){
+				width: 100%;
+				padding: 0;
+			}
 		}
 		&-wp{
 			border-radius: 30px;
 			background: #fff;
 			padding: 88px 55px 66px;
 			box-shadow: 4px 4px 34px 0 rgba($color: #000000, $alpha: .1);
+			@include mq{
+				padding: 60px 8px;
+			}
 		}
 		&-img{
 			text-align: center;
 			margin-bottom: 84px;
 			@include flex(center, center);
+			@include mq{
+				margin-bottom: 44px;
+			}
 		}
 		&-ttl{
 			text-align: center;
 			@include font-size(27);
 			margin-bottom: 34px;
 			font-weight: 700;
+			@include mq{
+				margin-bottom: 20px;
+			}
+		}
+		&-desc{
+			@include mq{
+				text-align: center;
+			}
 		}
 	}
 }
 
 
 .partner-top{
-	padding: 95px 0 110px;
+	padding: min(7.422vw, 95px) 0 min(8.594vw, 110px);
+	@include mq{
+		padding: 90px 0 100px;
+	}
 	&__ttl{
 		margin-bottom: 52px;
+		@include mq{
+			margin-bottom: 60px;
+		}
 	}
 	&__list{
-		@include flex(between, center, wrap);
+		@include flex(between, center);
 		gap: 15px;
+		@include mq(sm){
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 30px 50px;
+		}
 	}
 }
 
 .request-top{
-	padding: 170px 0 180px;
+	padding: min(13.281vw, 170px) 0 min(14.063vw, 180px);
 	background: #F2F2F2;
+	@include mq{
+		padding: 90px 0 100px;
+	}
 	&__ttl{
 		margin-bottom: 102px;
+		@include mq{
+			margin-bottom: 92px;
+		}
 	}
 	&__list{
 		justify-content: center;
 		margin: 0 -20px -20px;
 		counter-reset: li;
+		@include mq{
+			margin: 0 auto 90px;
+		}
 		&-item{
 			width: 33.33%;
 			padding: 0 20px;
 			margin-bottom: 110px;
 			position: relative;
 			position: relative;
+			@include mq{
+				width: 100%;
+				margin-bottom: 177px;
+				padding: 0 7px;
+			}
 			&:nth-child(3){
 				&::after{
-					display: none;
+					@include mq(md-min){
+						display: none;
+					}
 				}
 			}
 			&:last-of-type{
+				@include mq{
+					margin-bottom: 0;
+				}
 				&::after{
 					display: none;
 				}
 			}
 			&::after{
-				content: "";
-				display: inline-block;
-				width: 0;
-				height: 0;
-				border-width: 14.5px 0 14.5px 14px;
-				border-color: transparent transparent transparent #0D3C75;
-				border-style: solid;
-				position: absolute;
-				top: 50%;
-				right: -11px;
-				transform: translateY(-50%);
+				@include mq(){
+					content: "";
+					display: inline-block;
+					width: 0;
+					height: 0;
+					border-width: 14px 14.5px 0 14.5px;
+					border-color: #0D3C75 transparent transparent transparent;
+					border-style: solid;
+					position: absolute;
+					left: 50%;
+					bottom: -87px;
+					transform: translateX(-50%);
+				}
+				@include mq(md-min){
+					content: "";
+					display: inline-block;
+					width: 0;
+					height: 0;
+					border-width: 14.5px 0 14.5px 14px;
+					border-color: transparent transparent transparent #0D3C75;
+					border-style: solid;
+					position: absolute;
+					top: 50%;
+					right: -11px;
+					transform: translateY(-50%);
+				}
 			}
 			&::before{
 				counter-increment: li;
@@ -546,6 +715,10 @@
 			background: #fff;
 			padding: 65px 40px 29px;
 			box-shadow: 4px 5px 21px 0 rgba($color: #000000, $alpha: .1);
+			@include mq{
+				padding: 64px 35px 28px 50px;
+				height: 250px;
+			}
 		}
 		&-ttl{
 			text-align: center;
@@ -558,16 +731,25 @@
 
 
 .faq-top{
-	padding: 184px 0 200px;
+	padding: min(14.375vw, 184px) 0 min(15.625vw, 200px);
+	@include mq{
+		padding: 140px 0 150px;
+	}
 	&__ttl{
 		margin-bottom: 75px;
+		@include mq{
+			margin-bottom: 60px;
+		}
 	}
 	&__main{
 		max-width: 800px;
 		width: 100%;
 		margin: 0 auto;
 		&-dl{
-			margin-bottom: 100px;
+			margin-bottom: min(7.813vw, 100px);
+			@include mq{
+				margin-bottom: 48px;
+			}
 			&:last-of-type{
 				margin-bottom: 0;
 			}
@@ -583,41 +765,75 @@
 			padding: 15px 35px;
 			border-radius: 100px;
 			margin-bottom: 30px;
+			@include mq{
+				@include font-size(16);
+				padding: 12px 18px;
+				line-height: 1.5;
+			}
 		}
 		&-dd{
 			padding: 0 30px;
+			@include mq{
+				padding: 0;
+			}
 		}
 	}
 }
 
 
 .contact-top{
-	padding: 184px 0 30px;
+	padding: min(14.375vw, 184px) 0 30px;
 	background: #0d3b74;
 	background: -webkit-gradient(linear, left top, right top, from(#0d3b74), to(#0456a2));
 	background: -o-linear-gradient(left, #0d3b74 0%, #0456a2 100%);
 	background: linear-gradient(90deg, #0d3b74 0%, #0456a2 100%);
+	@include mq{
+		padding: 90px 0 18px;
+	}
 	&__ttl{
 		margin-bottom: 75px;
+		@include mq{
+			margin-bottom: 62px;
+		}
 	}
 	&__intro{
 		text-align: center;
 		line-height: 2.375;
 		margin-bottom: 75px;
 		color: #fff;
+		@include mq{
+			line-height: 2;
+			margin-bottom: 62px;
+			p{
+				margin-bottom: 20px;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+		}
 	}
 	&__form{
 		max-width: 800px;
 		width: 100%;
 		margin: 0 auto;
-		padding-bottom: 200px;
+		padding-bottom: min(15.625vw, 200px);
 		border-bottom: 1px solid #000911;
-		margin-bottom: 127px;
+		margin-bottom: min(9.922vw, 127px);
+		@include mq{
+			padding: 0 10px 148px;
+			margin-bottom: 142px;
+		}
 	}
 	&__dl{
 		margin-bottom: 53px;
+		@include mq{
+			margin-bottom: 57px;
+		}
 		&:nth-last-child(2){
 			margin-bottom: 80px;
+			@include mq{
+				margin-bottom: 57px;
+			}
 		}
 	}
 	&__dt{
@@ -625,17 +841,26 @@
 		@include font-size(18);
 		font-weight: 700;
 		margin-bottom: 12px;
+		@include mq{
+			@include font-size(16);
+		}
 		.required{
 			font-family: 'Inter', sans-serif;
 			color: #FF7A00;
 			@include font-size(14);
 			margin-left: 10px;
+			@include mq{
+				@include font-size(12);
+			}
 		}
 		.multiple{
 			color: #B2B2B2;
 			font-family: 'Inter', sans-serif;
 			@include font-size(14);
 			margin-left: 10px;
+			@include mq{
+				@include font-size(12);
+			}
 		}
 	}
 	.l-grid{
@@ -645,9 +870,15 @@
 	&__profile{
 		max-width: 560px;
 		width: 100%;
-		margin: 0 auto 214px;
+		margin: 0 auto min(16.719vw, 214px);
+		@include mq{
+			margin-bottom: 154px;
+		}
 		&-ttl{
 			margin-bottom: 65px;
+			@include mq{
+				margin-bottom: 62px;
+			}
 		}
 		&-dl{
 			color: #fff;
@@ -655,16 +886,30 @@
 			@include font-size(20);
 			line-height: 3;
 			font-weight: 500;
-			// margin-bottom: 20px;
+			@include mq{
+				@include font-size(18);
+			}
+			@include mq(sm){
+				margin-bottom: 41px;
+				line-height: 2;
+			}
 		}
 		&-dt{
 			width: 150px;
 			font-weight: 700;
 			letter-spacing: 1px;
+			@include mq(sm){
+				width: 100%;
+				margin-bottom: 3px;
+			}
 		}
 		&-dd{
 			width: calc(100% - 150px);
 			letter-spacing: 2px;
+			@include mq(sm){
+				@include font-size(16);
+				width: 100%;
+			}
 		}
 	}
 }
@@ -674,4 +919,7 @@
 	text-align: center;
 	@include font-size(12);
 	color: #B3B3B3;
+	@include mq{
+		@include font-size(10);
+	}
 }
