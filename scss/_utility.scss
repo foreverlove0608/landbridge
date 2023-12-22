@@ -24,6 +24,17 @@ Utility
 	}
 }
 
+.pc-tb {
+	@include mq(tb){
+		display: none
+	}
+}
+.sp-tb {
+	@include mq(tb-min){
+		display: none
+	}
+}
+
 // Hover style
 .u-fn-hover{
 	display: inline-block;

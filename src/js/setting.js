@@ -34,6 +34,7 @@ jQuery(function ($) {
 	$('.system-top__list-img').matchHeight();
 	$('.system-top__list-desc').matchHeight();
 	$('.request-top__list-item p').matchHeight();
+	$('.results-top__list-ttl').matchHeight();
 	$(window).on("load resize", function () {
 		$('.reason-top__list-ttl').matchHeight();
 	});
