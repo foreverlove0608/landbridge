@@ -1017,8 +1017,7 @@ reset style
 html {
   overflow-y: scroll;
   overflow-x: hidden;
-  font-size: 10px;
-  /* Base font size, change to 14px or 16px if needed */
+  font-size: 10px; /* Base font size, change to 14px or 16px if needed */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -1228,8 +1227,8 @@ Layout
 }
 @media screen and (max-width: 834px) {
   .mwform-checkbox-field label,
-.mwform-radio-field label,
-.pure-input {
+  .mwform-radio-field label,
+  .pure-input {
     font-size: 1.6rem;
   }
 }
@@ -1252,8 +1251,8 @@ Layout
 }
 @media screen and (max-width: 834px) {
   .mwform-checkbox-field label input[type=checkbox] + span,
-.mwform-radio-field label input[type=checkbox] + span,
-.pure-input input[type=checkbox] + span {
+  .mwform-radio-field label input[type=checkbox] + span,
+  .pure-input input[type=checkbox] + span {
     padding: 3px 0 3px 44px;
     letter-spacing: 2px;
   }
@@ -1266,8 +1265,8 @@ Layout
 }
 @media screen and (max-width: 834px) {
   .mwform-checkbox-field label input[type=checkbox] + span::before,
-.mwform-radio-field label input[type=checkbox] + span::before,
-.pure-input input[type=checkbox] + span::before {
+  .mwform-radio-field label input[type=checkbox] + span::before,
+  .pure-input input[type=checkbox] + span::before {
     top: -2px;
     -webkit-transform: none;
         -ms-transform: none;
@@ -1285,8 +1284,8 @@ Layout
 }
 @media screen and (max-width: 834px) {
   .mwform-checkbox-field label input[type=checkbox] + span:after,
-.mwform-radio-field label input[type=checkbox] + span:after,
-.pure-input input[type=checkbox] + span:after {
+  .mwform-radio-field label input[type=checkbox] + span:after,
+  .pure-input input[type=checkbox] + span:after {
     top: 3px;
     left: 7px;
   }
@@ -1318,8 +1317,8 @@ Layout
 }
 @media screen and (max-width: 834px) {
   .mwform-checkbox-field label span,
-.mwform-radio-field label span,
-.pure-input span {
+  .mwform-radio-field label span,
+  .pure-input span {
     padding: 2px 0 2px 30px;
   }
 }
@@ -1346,8 +1345,8 @@ Layout
 }
 @media screen and (max-width: 834px) {
   .mwform-checkbox-field label span:before,
-.mwform-radio-field label span:before,
-.pure-input span:before {
+  .mwform-radio-field label span:before,
+  .pure-input span:before {
     left: 0;
     width: 23px;
     height: 23px;
@@ -1471,7 +1470,7 @@ Component
 .c-ttl__01 {
   text-align: center;
   font-weight: 700;
-  margin-bottom: min(6.25vw, 80px);
+  margin-bottom: min(5.703vw, 73px);
 }
 @media screen and (max-width: 834px) {
   .c-ttl__01 {
@@ -1564,10 +1563,10 @@ Component
           transform: rotate(25deg);
 }
 .c-btn__01 a {
-  background: #ff7a00;
-  background: -webkit-gradient(linear, left top, right top, from(#ff7a00), to(#e7b500));
-  background: -o-linear-gradient(left, #ff7a00 0%, #e7b500 100%);
-  background: linear-gradient(90deg, #ff7a00 0%, #e7b500 100%);
+  background: rgb(255, 122, 0);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 122, 0)), to(rgb(231, 181, 0)));
+  background: -o-linear-gradient(left, rgb(255, 122, 0) 0%, rgb(231, 181, 0) 100%);
+  background: linear-gradient(90deg, rgb(255, 122, 0) 0%, rgb(231, 181, 0) 100%);
   height: 80px;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -1659,10 +1658,10 @@ Component
   width: 100%;
   outline: 0;
   border: none;
-  background: #ff7a00;
-  background: -webkit-gradient(linear, left top, right top, from(#ff7a00), to(#e7b500));
-  background: -o-linear-gradient(left, #ff7a00 0%, #e7b500 100%);
-  background: linear-gradient(90deg, #ff7a00 0%, #e7b500 100%);
+  background: rgb(255, 122, 0);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(255, 122, 0)), to(rgb(231, 181, 0)));
+  background: -o-linear-gradient(left, rgb(255, 122, 0) 0%, rgb(231, 181, 0) 100%);
+  background: linear-gradient(90deg, rgb(255, 122, 0) 0%, rgb(231, 181, 0) 100%);
   height: 110px;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -1894,8 +1893,29 @@ Utility
 }
 
 .problems-top {
-  padding: min(16.953vw, 217px) 0 min(16.563vw, 212px);
+  padding: min(16.328vw, 209px) 0 min(16.563vw, 212px);
   background: #0D3C75;
+  position: relative;
+}
+.problems-top:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 60px 180px 0 180px;
+  border-color: #0D3C75 transparent transparent transparent;
+  border-style: solid;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 100%);
+      -ms-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+}
+@media screen and (max-width: 834px) {
+  .problems-top:after {
+    border-width: 34px 100px 0 100px;
+  }
 }
 @media screen and (max-width: 834px) {
   .problems-top {
@@ -2172,6 +2192,9 @@ Utility
     padding: 90px 0 100px;
   }
 }
+.reason-top__ttl {
+  margin-bottom: min(6.797vw, 87px);
+}
 @media screen and (max-width: 834px) {
   .reason-top__ttl {
     margin-bottom: 60px;
@@ -2253,16 +2276,14 @@ Utility
     padding: 140px 0 0;
   }
 }
-@media screen and (max-width: 834px) {
-  .features-top__ttl {
-    margin-bottom: 62px;
-  }
+.features-top__ttl {
+  margin-bottom: 62px;
 }
 .features-top__desc {
   font-size: 2.4rem;
   line-height: 2.3;
   text-align: center;
-  margin-bottom: 242px;
+  margin-bottom: 240px;
 }
 @media screen and (max-width: 1024px) {
   .features-top__desc {
@@ -2332,10 +2353,13 @@ Utility
     margin-bottom: 0;
   }
 }
+.features-top__list-item:last-of-type .features-top__list-desc:after {
+  display: none;
+}
 .features-top__list-img {
   max-width: 330px;
   width: 100%;
-  margin: 0 auto -28%;
+  margin: 0 auto -27%;
   position: relative;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -2365,8 +2389,21 @@ Utility
   }
 }
 .features-top__list-desc {
-  color: #ffff;
+  color: white;
   font-weight: 700;
+  position: relative;
+}
+@media screen and (min-width: 835px) {
+  .features-top__list-desc:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: #102E53;
+    right: -70px;
+    bottom: 0;
+  }
 }
 @media screen and (max-width: 834px) {
   .features-top__list-desc {
@@ -2416,10 +2453,10 @@ Utility
   color: #fff;
   width: 100%;
   padding: 41px 20px;
-  background: #0d3b74;
-  background: -webkit-gradient(linear, left top, right top, from(#0d3b74), to(#0456a2));
-  background: -o-linear-gradient(left, #0d3b74 0%, #0456a2 100%);
-  background: linear-gradient(90deg, #0d3b74 0%, #0456a2 100%);
+  background: rgb(13, 59, 116);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(13, 59, 116)), to(rgb(4, 86, 162)));
+  background: -o-linear-gradient(left, rgb(13, 59, 116) 0%, rgb(4, 86, 162) 100%);
+  background: linear-gradient(90deg, rgb(13, 59, 116) 0%, rgb(4, 86, 162) 100%);
   border-radius: 55px;
   text-align: center;
   margin-bottom: 40px;

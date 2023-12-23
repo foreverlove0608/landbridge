@@ -70,8 +70,25 @@
 }
 
 .problems-top{
-	padding: min(16.953vw, 217px) 0 min(16.563vw, 212px);
+	padding: min(16.328vw, 209px) 0 min(16.563vw, 212px);
 	background: #0D3C75;
+	position: relative;
+	&:after{
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		border-width: 60px 180px 0 180px;
+		border-color: #0D3C75 transparent transparent transparent;
+		border-style: solid;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 100%);
+		@include mq{
+			border-width: 34px 100px 0 100px;
+		}
+	}
 	@include mq{
 		padding: 85px 0 90px;
 	}
@@ -271,6 +288,7 @@
 		padding: 90px 0 100px;
 	}
 	&__ttl{
+		margin-bottom: min(6.797vw, 87px);
 		@include mq{
 			margin-bottom: 60px;
 		}
@@ -327,15 +345,13 @@
 		padding: 140px 0 0;
 	}
 	&__ttl{
-		@include mq{
-			margin-bottom: 62px;
-		}
+		margin-bottom: 62px;
 	}
 	&__desc{
 		@include font-size(24);
 		line-height: 2.3;
 		text-align: center;
-		margin-bottom: 242px;
+		margin-bottom: 240px;
 		@include mq(tb){
 			@include font-size(20);
 		}
@@ -385,11 +401,18 @@
 					margin-bottom: 0;
 				}
 			}
+			&:last-of-type{
+				.features-top__list-desc{
+					&:after{
+						display: none;
+					}
+				}
+			}
 		}
 		&-img{
 			max-width: 330px;
 			width: 100%;
-			margin: 0 auto -28%;
+			margin: 0 auto -27%;
 			position: relative;
 			transform: translateY(-50%);
 			@include mq{
@@ -413,6 +436,14 @@
 		&-desc{
 			color: #ffff;
 			font-weight: 700;
+			position: relative;
+			@include mq(md-min){
+				@include p-after(3px, 100%){
+					background: #102E53;
+					right: -70px;
+					bottom: 0;
+				}
+			}
 			@include mq{
 				line-height: 2;
 			}
